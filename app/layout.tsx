@@ -23,21 +23,12 @@ const favorit = localFont({
 });
 
 export const viewport: Viewport = {
-  themeColor: "#000000",
+  themeColor: "#000001",
   initialScale: 1,
   width: "device-width",
   // maximumScale: 1, hitting accessability
 };
 
-export const metadata: Metadata = {
-  metadataBase: new URL("https://aura-tts-demo.deepgram.com"),
-  title: "Deepgram AI Agent",
-  description: `Deepgram's AI Agent Demo shows just how fast Speech-to-Text and Text-to-Speech can be.`,
-  robots: {
-    index: false,
-    follow: false,
-  },
-};
 
 export default function RootLayout({
   children,
