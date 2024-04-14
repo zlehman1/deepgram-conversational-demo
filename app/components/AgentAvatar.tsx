@@ -1,9 +1,10 @@
 import { Avatar } from "@nextui-org/react";
-import { DgSvg } from "./DgSvg";
 import { Message } from "ai/react";
 import { useMessageData } from "../context/MessageMetadata";
 import { useAudioStore } from "../context/AudioStore";
 import { voiceMap } from "../context/Deepgram";
+import Image from "next/image";
+import shreya from "../../public/shreya.svg"
 
 export const AgentAvatar = ({
   message,
@@ -26,5 +27,5 @@ export const AgentAvatar = ({
     return <Avatar src={voiceMap(foundData?.ttsModel).avatar} />;
   }
 
-  return <DgSvg />;
+  return <Image src={shreya} alt={""}  />;
 };
