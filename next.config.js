@@ -35,7 +35,6 @@ const nextConfig = {
       })
     );
 
-    // vercel
     config.plugins.push(
       new CopyPlugin({
         patterns: wasmPaths.map((p) => ({
@@ -65,6 +64,10 @@ const nextConfig = {
       },
     ];
   },
+  env: {
+    // Add this to define your production domain for metadataBase
+    METADATA_BASE_URL: 'https://deepgram-conversational-demo-no7h9cpg8-outcall-ai.vercel.app'
+  }
 };
 
 module.exports = nextConfig;
